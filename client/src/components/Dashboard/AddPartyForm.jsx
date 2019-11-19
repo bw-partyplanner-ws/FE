@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useSelector } from 'react-redux';
 import { ActionsContext } from '../../contexts/ActionsContext';
 import './AddPartyForm.css';
+
 const TempStyle = styled.div`
 	width: 100%;
 	height: 100vh;
@@ -14,11 +15,6 @@ const TempStyle = styled.div`
 	align-items: center;
 	flex-direction: column;
 `;
-// const useStyles = makeStyles(theme => ({
-//   textField: {
-//     color: '#FC427B',
-//   }
-// }));
 
 const AddPartyForm = props => {
 	console.log(props);
