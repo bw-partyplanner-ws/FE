@@ -10,7 +10,7 @@ import {
   GET_SHOPPING_LIST_SUCCESS,
 } from './types';
 import { partyApiWithAuth as axios } from '../../helpers/axiosConfig';
-import { DELETE_PARTY_START } from '../party/types';
+// import { DELETE_PARTY_START } from '../party/types';
 
 export const useShoppingActions = () => {
   const dispatch = useDispatch();
