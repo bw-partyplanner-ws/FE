@@ -103,7 +103,7 @@ function AddItem(props) {
         />
 
         <ColorButton variant='contained' color='primary' type='submit'>
-          <AddIcon/>
+          <AddIcon />
         </ColorButton>
       </form>
     </div>
