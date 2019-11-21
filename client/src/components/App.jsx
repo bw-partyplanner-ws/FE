@@ -6,7 +6,7 @@ import { ActionsProvider } from '../contexts/ActionsContext';
 import { Route, Switch } from 'react-router-dom';
 import Container from '@material-ui/core/Container';
 import AddPartyForm from './Dashboard/AddPartyForm';
-import { usePartyActions } from '../store/party/usePartyActions';
+import { usePartyActions } from '../store/party/usePartyActions.jsx';
 import Navigation from './navigation/Navigation';
 import party from '../imgs/party.jpg';
 import CssBaseline from '@material-ui/core/CssBaseline';

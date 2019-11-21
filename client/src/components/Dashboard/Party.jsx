@@ -15,7 +15,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import moment from 'moment';
 import { useSelector } from 'react-redux';
 import { ActionsContext } from '../../contexts/ActionsContext';
-import CreateList from '../createList/CreateList';
+import CreateList from '../../contexts/ActionsContext';
 import styled from 'styled-components';
 
 const useStyles = makeStyles(theme=>({
