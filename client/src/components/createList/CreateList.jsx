@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Items from './Items';
-import AddItem from './AddItem';
+import AddItem from './Additem';
 import Button from '@material-ui/core/Button';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { pink } from '@material-ui/core/colors';

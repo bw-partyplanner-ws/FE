@@ -11,11 +11,12 @@ export const useLocalStorage = (key) => {
 	}
 
 	function getLocalStorage() {
-		return JSON.parse(localStorage.getItem(localStorageKey));
+        // return JSON.parse(localStorage.getItem(localStorageKey));
+        return localStorage.getItem(localStorageKey);
 	}
 
 	function setLocalStorage(value) {
-		localStorage.setItem(localStorageKey, JSON.stringify(value));
+		localStorage.setItem(localStorageKey, value);
 	}
 
 	function removeLocalStorage() {

@@ -4,7 +4,6 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 const AddListItem = (props) => {
-  // Shop = True, Todo = False
   const [mode, setMode] = useState(false);
   const [values, setValues] = useState({});
   const { shoppingActions: { addShoppingItem }, todoActions: { addTodoItem } } = useContext(ActionsContext);
