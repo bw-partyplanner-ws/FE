@@ -54,7 +54,7 @@ export const usePartyActions = () => {
   const addParty = useCallback(
     (newParty) => {
       dispatch({ type: ADD_PARTY_START });
-      axios
+        axios
         .post('/parties', newParty)
         .then((res) => console.log(res.data))
         .catch((err) => console.log(err));
