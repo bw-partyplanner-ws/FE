@@ -26,7 +26,7 @@ export const useAuthActions = () => {
         }),
       )
       .catch(
-        (err) => dispatch({ type: LOGIN_FAIL, payload: err.response.data }));
+        (err) => dispatch({ type: LOGIN_FAIL, payload: err }));
   }, [dispatch]);
 
   const register = useCallback((newUser) => {
@@ -38,7 +38,7 @@ export const useAuthActions = () => {
         axios.post('/auth/login', newUser)
           .then(res => dispatch({ type: LOGIN_SUCCESS, payload: res.data }))
           .catch(err => dispatch(
-            { type: LOGIN_FAIL, payload: err.response.data }));
+            { type: LOGIN_FAIL, payload: err }));
       })
       .catch(
         (err) => dispatch({ type: REGISTER_FAIL, payload: REGISTER_FAIL }));

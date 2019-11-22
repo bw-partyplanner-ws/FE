@@ -24,14 +24,14 @@ export const usePartyActions = () => {
   const fetchParties = useCallback(
     () => {
       dispatch({ type: GET_ALL_PARTIES_START });
-      axios()
+      axios
         .get('/parties')
         .then((res) => {
           dispatch({ type: GET_ALL_PARTIES_SUCCESS, payload: res.data });
         })
         .catch((err) => {
-          if (err.response.status === 401) localStorage.removeItem('token');
-          dispatch({ type: GET_ALL_PARTIES_FAIL, payload: err.response.data });
+        //   if (err.response.status === 401) localStorage.removeItem('token');
+        //   dispatch({ type: GET_ALL_PARTIES_FAIL, payload: err.response.data });
         });
     },
     [dispatch],
@@ -40,7 +40,7 @@ export const usePartyActions = () => {
   const fetchParty = useCallback(
     (id) => {
       dispatch({ type: GET_SINGLE_PARTY_START });
-      axios()
+      axios
         .get(`/parties/${id}`)
         .then((res) => {
           dispatch({ type: GET_SINGLE_PARTY_SUCCESS, payload: res.data });
@@ -54,7 +54,7 @@ export const usePartyActions = () => {
   const addParty = useCallback(
     (newParty) => {
       dispatch({ type: ADD_PARTY_START });
-      axios()
+      axios
         .post('/parties', newParty)
         .then((res) => console.log(res.data))
         .catch((err) => console.log(err));
@@ -65,7 +65,7 @@ export const usePartyActions = () => {
   const editParty = useCallback(
     (updatedParty) => {
       dispatch({ type: UPDATE_PARTY_START });
-      axios()
+      axios
         .put(`/parties/${updatedParty.id}`, updatedParty)
         .then(() => {
           dispatch({ type: UPDATE_PARTY_SUCCESS, payload: updatedParty });
@@ -79,7 +79,7 @@ export const usePartyActions = () => {
   const deleteParty = useCallback(
     (id) => {
       dispatch({ type: DELETE_PARTY_START });
-      axios()
+      axios
         .delete(`/parties/${id}`)
         .then(() => dispatch({ type: DELETE_PARTY_SUCCESS, payload: id }))
         .catch((err) => dispatch(
